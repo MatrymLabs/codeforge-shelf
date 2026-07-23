@@ -7,7 +7,7 @@ name = "codeforge-shelf"
 version = "0.1.0"
 description = "The CodeForge Hardware Store: reusable, engine-agnostic Python cores."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "MatrymLabs" }]
@@ -29,6 +29,7 @@ test = [
     "hypothesis",
     "pytest",
 ]
+dev = ["ruff"]
 
 [project.urls]
 Homepage = "https://github.com/MatrymLabs/codeforge"
@@ -42,3 +43,10 @@ codeforge_shelf = ["py.typed"]
 
 [tool.pytest.ini_options]
 markers = ["property: hypothesis-driven property tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
