@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codeforge-shelf"
+version = "0.1.0"
+description = "The CodeForge Hardware Store: reusable, engine-agnostic Python cores."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "MatrymLabs" }]
+keywords = ["reusable", "stdlib", "resilience", "patterns", "hardware-store"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Typing :: Typed",
+]
+dependencies = [
+    "fastapi",
+    "pydantic",
+    "structlog",
+]
+
+[project.optional-dependencies]
+test = [
+    "hypothesis",
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/MatrymLabs/codeforge"
+Source = "https://github.com/MatrymLabs/codeforge"
+
+[tool.setuptools]
+packages = ["codeforge_shelf"]
+
+[tool.pytest.ini_options]
+markers = ["property: hypothesis-driven property tests"]
