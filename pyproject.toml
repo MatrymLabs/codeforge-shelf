@@ -37,5 +37,8 @@ Source = "https://github.com/MatrymLabs/codeforge"
 [tool.setuptools]
 packages = ["codeforge_shelf"]
 
+[tool.setuptools.package-data]
+codeforge_shelf = ["py.typed"]
+
 [tool.pytest.ini_options]
 markers = ["property: hypothesis-driven property tests"]
