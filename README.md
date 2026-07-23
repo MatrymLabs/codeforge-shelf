@@ -11,7 +11,7 @@ standalone package. No game engine is required to use them. Fully typed (PEP 561
 
 ```sh
 pip install codeforge-shelf
-# or, unreleased: pip install git+https://github.com/MatrymLabs/codeforge-shelf
+# or from source: pip install git+https://github.com/MatrymLabs/codeforge-shelf
 ```
 
 Third-party dependencies: fastapi, pydantic, structlog.
